@@ -1,0 +1,6 @@
+{
+  "name": "handout4",
+  "private": true,
+  "scripts": {"vendor": "node scripts/vendor.mjs"},
+  "dependencies": {"pdfjs-dist": "6.5.438"}
+}

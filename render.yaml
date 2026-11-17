@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: handout4
+    runtime: docker
+    plan: free
+    region: singapore
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /healthz
+    envVars:
+      - key: TOTAL_MEMORY_MB
+        value: "448"
+      - key: JOB_TIMEOUT_SECONDS
+        value: "120"
+      - key: PORT
+        value: "10000"
