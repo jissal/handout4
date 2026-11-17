@@ -48,4 +48,4 @@ Windows 호스트의 독립 QEMU Linux VM에서 Alpine 3.24.4, Linux 6.18.60, Do
 
 50MiB는 모든 파일의 변환 성공 보장이 아닙니다. 압축 해제 100MiB, 이미지별 2,000만 픽셀, 결과 64MiB, 전체 120초를 넘으면 한국어 오류를 표시합니다. 사진 해상도를 줄이거나 원본 도구에서 PDF로 내보내는 것이 무료 환경의 현실적인 대안입니다. PPTX 기능은 유지합니다.
 
-실제 Render 결과는 배포 후 별도 기록합니다. Docker 512MiB/0.1CPU 성공을 Render 실측이라고 보고하지 않습니다. 무료 절전 후 첫 대기는 화면에 안내하며 반복 호출로 우회하지 않습니다. `scripts/test-docker.sh`는 재현 절차이며 이번 검증은 대응하는 개별 명령을 직접 실행했습니다.
+실제 Render 배포도 완료했으며 결과는 [DEPLOYMENT_REPORT.md](DEPLOYMENT_REPORT.md)에 별도로 기록했습니다. 이 보고서의 Docker 512MiB/0.1CPU 수치와 Render 실측을 구분합니다. 무료 절전 후 첫 대기는 화면에 안내하며 반복 호출로 우회하지 않습니다. `scripts/test-docker.sh`는 재현 절차이며 이번 검증은 대응하는 개별 명령을 직접 실행했습니다.

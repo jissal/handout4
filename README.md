@@ -1,5 +1,9 @@
 # PDF·PPTX 유인물 변환기
 
+**사용 주소: https://handout4.onrender.com**
+
+2026-11-17 실제 Render 무료 Web Service에서 PDF·PPTX 50MiB 입력, 12→3페이지, 실제 미리보기·다운로드를 검증했습니다. 측정값은 [DEPLOYMENT_REPORT.md](DEPLOYMENT_REPORT.md)에 있습니다.
+
 PDF 또는 PPTX를 올리면 A4 가로 용지에 2×2로 배치합니다. 순서는 왼쪽 위 → 오른쪽 위 → 왼쪽 아래 → 오른쪽 아래입니다. 12슬라이드는 3페이지가 됩니다.
 
 파일 업로드, 실제 PDF 미리보기·다운로드, 짧은 사용방법만 표시합니다. PDF.js로 페이지 이동·확대·축소·화면 맞춤을 제공하며, 파일명을 바꿔 같은 PDF 데이터를 다운로드합니다. 12슬라이드가 아니어도 경고 후 변환합니다. 로그인·DB·유료 API는 없습니다.
@@ -62,7 +66,7 @@ Render에서 New → Web Service → 저장소 연결을 선택합니다.
 - `TOTAL_MEMORY_MB=448`, `JOB_TIMEOUT_SECONDS=120`, `PORT=10000`
 - HTTP Health Check Path: `/healthz` (기본 TCP 검사도 지원)
 
-또는 `render.yaml`을 Blueprint로 배포할 수 있습니다. 비밀번호나 API 키를 코드에 넣지 않습니다. 무료 서비스는 유휴 상태에서 절전하며 첫 접속·PPTX 요청에 대기 시간이 생깁니다. 화면에 안내하며 외부 절전 방지 호출은 사용하지 않습니다. 무료 512MB/0.1CPU의 Docker 시험은 통과했지만 실제 Render 실행 여부는 배포 후 별도로 확인해야 합니다.
+또는 `render.yaml`을 Blueprint로 배포할 수 있습니다. 비밀번호나 API 키를 코드에 넣지 않습니다. 무료 서비스는 유휴 상태에서 절전하며 첫 접속·PPTX 요청에 대기 시간이 생깁니다. 화면에 안내하며 외부 절전 방지 호출은 사용하지 않습니다. Docker 512MiB/0.1CPU 시험과 실제 Render 무료 서버 시험을 각각 완료했습니다.
 
 ## 검증
 
